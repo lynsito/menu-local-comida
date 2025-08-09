@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página QR Local</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff5f8;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            border-bottom: 3px solid #ff69b4;
+        }
+
+        header img {
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 1.3rem;
+            color: #ff69b4;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 3px solid #ff69b4;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(255,105,180,0.2);
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:active {
+            transform: scale(0.96);
+            box-shadow: 0 2px 6px rgba(255,105,180,0.4);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            background-color: #ff69b4;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            padding: 12px;
+            background-color: #fff0f6;
+        }
+
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 480px) {
+            header img {
+                height: 60px;
+            }
+            .card img {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo del Local">
+        <h1>¡Bienvenido al Sazón Jarocho!</h1>
+    </header>
+
+    <div class="container">
+        <!-- Recuadro Menú -->
+        <div class="card" onclick="window.open('menu.pdf')">
+            <img src="menu.png" alt="Menú">
+            <div class="card-title">Consulta nuestra Carta</div>
+            <div class="card-desc">Consulta nuestros platillos y paquetes a la carta.</div>
+        </div>
+
+        <!-- Recuadro Facebook -->
+        <div class="card" onclick="window.open('https://www.facebook.com/TuPagina', '_blank')">
+            <img src="facebook.png" alt="Facebook">
+            <div class="card-title">Pasteles y más</div>
+            <div class="card-desc">Descubre nuestros Pasteles, postres y encargos.</div>
+        </div>
+
+        <!-- Recuadro WhatsApp -->
+        <div class="card" onclick="window.open('https://chat.whatsapp.com/tu-enlace-de-grupo', '_blank')">
+            <img src="whatsapp.png" alt="WhatsApp">
+            <div class="card-title">Unirse al Canal WhatsApp</div>
+            <div class="card-desc">Únete para recibir el menú diario en el canal de WhatsApp.</div>
+        </div>
+    </div>
+
+</body>
+</html>
